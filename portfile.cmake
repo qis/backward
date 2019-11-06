@@ -10,10 +10,7 @@ vcpkg_from_github(
     HEAD_REF master
 )
 
-file(COPY
-  ${CURRENT_PORT_DIR}/backward-config.cmake.in
-  ${CURRENT_PORT_DIR}/CMakeLists.txt
-  DESTINATION ${SOURCE_PATH})
+file(COPY ${CURRENT_PORT_DIR}/CMakeLists.txt DESTINATION ${SOURCE_PATH})
 
 vcpkg_configure_cmake(SOURCE_PATH ${SOURCE_PATH} PREFER_NINJA)
 
