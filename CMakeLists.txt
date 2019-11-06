@@ -21,6 +21,7 @@ install(TARGETS backward EXPORT backward LIBRARY DESTINATION lib ARCHIVE DESTINA
 install(EXPORT backward FILE backward-config.cmake NAMESPACE backward:: DESTINATION lib/cmake/backward)
 
 include(CMakePackageConfigHelpers)
+
 write_basic_package_version_file(${CMAKE_CURRENT_BINARY_DIR}/backward-config-version.cmake
   VERSION ${PROJECT_VERSION} COMPATIBILITY SameMajorVersion)
 
